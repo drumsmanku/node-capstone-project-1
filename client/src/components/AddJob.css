@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+body{
+  font-family: 'DM Sans';
+  margin: 0;
+  padding: 0;
+}
+
+.add-container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.add-left-container{
+  width: 58%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.add-right-container{
+  width: 42%;
+  background-size: 'cover';
+  background-position:center;
+  background-repeat: no-repeat;
+}
+.add-container input{
+  border: 2px solid #C2C2C2;
+  border-radius: 0.2rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+.add-left-container form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+}
+.btn-add-page-add{
+  height: 2rem;
+  width: 15%;
+  font-size: medium;
+  background-color: #ED5353;
+  border: none;
+  border-radius: 0.3rem;
+  margin-left: 1rem;
+  margin-bottom:0;
+  color: white;
+}
+.btn-add-page-cancel{
+  height: 2rem;
+  width: 15%;
+  font-size: medium;
+  background-color: #FFFFFF;
+  border: 1px solid #CECECE;
+  color: #CECECE;
+  border-radius: 0.3rem;
+ 
+  margin-bottom: 0;
+  
+}

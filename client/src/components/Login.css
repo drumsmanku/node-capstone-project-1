@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+body{
+  font-family: 'DM Sans';
+}
+
+.login-container{
+  width:100vw;
+  height: 100vh;
+  display: flex;
+}
+.login-left-container{
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'DM Sans';
+  color: black;
+
+}
+
+.login-right-container{
+  width: 45%;
+  height: 100vh;
+  background-size: 'cover';
+  background-position:center;
+  background-repeat: no-repeat;
+}
+
+.login-container form{
+  display: flex;
+  flex-direction: column;
+}
+.login-container input [type='password'], [type='email']{
+  width: 70%;
+  height: 3rem;
+  border:2px solid #C2C2C2;
+  border-radius: 0.4rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.login-container button{
+  height: 2.7rem;
+  width: 25%;
+  font-size: x-large;
+  background-color: #ED5353;
+  border: none;
+  border-radius: 0.3rem;
+  margin-left: 5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
