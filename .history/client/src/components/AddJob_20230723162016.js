@@ -79,9 +79,9 @@ function AddJob() {
             <div style={{width:"63%", textAlign:'start'}}>
               <select style={{border:'1.84px solid #C2C2C2', borderRadius:'0.2rem', height:'2rem', color:'#C2C2C2'}} name='jobType' value={jobs.jobType} onChange={handleChange} placeholder='Select'>
                 <option style={{textAlign:'center', color:'#C2C2C2'}} value="">Select</option>
-                <option value="Full Time">Full Time</option>
-                <option value="Part Time">Part Time</option>
-                <option value="Semi-Full Time">Semi-Full Time</option>
+                <option value="option1">Full Time</option>
+                <option value="option2">Part Time</option>
+                <option value="option3">Semi-Full Time</option>
               </select>
             </div>
             
@@ -91,8 +91,8 @@ function AddJob() {
             <div style={{width:"63%", textAlign:'start'}}>
               <select style={{border:'1.84px solid #C2C2C2', borderRadius:'0.2rem', height:'2rem', color:'#C2C2C2'}} name='remoteOrOffice' value={jobs.remoteOrOffice} onChange={handleChange} placeholder='Select'>
                 <option style={{textAlign:'center', color:'#C2C2C2'}} value="">Select</option>
-                <option value="Remote">Remote</option>
-                <option value="Office">Office</option>
+                <option value="option1">Remote</option>
+                <option value="option2">Office</option>
               </select>
 
             </div> 

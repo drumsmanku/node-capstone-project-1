@@ -7,8 +7,6 @@ import Success from './components/Success';
 import JobMainPage from './components/JobMainPage';
 import EditJob from './components/EditJob';
 import JobDetails from './components/JobDetails';
-import FailedLogin from './components/FailedLogin';
-import FailedRegister from './components/FailedRegister';
 
 function App() {
   return (
@@ -23,8 +21,6 @@ function App() {
           <Route path='/edit-job/:id' element={<EditJob/>}/>
           <Route path="/job-det/:id" element={<JobDetails/>}/>
           <Route path='/success' element={<Success/>}/>
-          <Route path='/failed-login' element={<FailedLogin/>}/>
-          <Route path='/failed-signup' element={<FailedRegister/>}/>
           
         </Routes>
       </Router>

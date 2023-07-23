@@ -106,8 +106,8 @@ function EditJob({jobId}) {
             <div style={{width:"63%", textAlign:'start'}}>
               <select style={{border:'1.84px solid #C2C2C2', borderRadius:'0.2rem', height:'2rem', color:'#C2C2C2'}} name='jobType' value={jobs.jobType} onChange={handleChange} placeholder='Select'>
                 <option style={{textAlign:'center', color:'#C2C2C2'}} value="">Select</option>
-                <option value="Full time">Full Time</option>
-                <option value="Part time">Part Time</option>
+                <option value="Fulltime">Full Time</option>
+                <option value="Parttime">Part Time</option>
                 <option value="Semi-Full Time">Semi-Full Time</option>
               </select>
             </div>

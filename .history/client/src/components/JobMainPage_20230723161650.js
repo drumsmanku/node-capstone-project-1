@@ -40,6 +40,7 @@ function JobMainPage() {
     axios.get(`https://job-new-portal.onrender.com/get-jobs?skills=${skills.join(',')}&jobPosition=${jobPositions.join(',')}`)
       .then(res => {
         setJobs(res.data.jobs);
+        console.log(res.data)
       })
       .catch(err => console.log(err));
   }, [skillsDet, position]);
@@ -81,6 +82,7 @@ function JobMainPage() {
       flexWrap: 'wrap',
     },
 
+    // ... add more styles as needed ...
   };
 
   return (
@@ -157,7 +159,7 @@ function JobMainPage() {
                 jobs.map((job, idx)=>(
                   <div key={idx} style={{...styles.jobCard, boxShadow:'0 0 1rem 0rem #FF202030', width:'100%', display:'flex', marginBottom:'2rem',paddingTop:'2rem',paddingBottom:'2rem', alignItems:'center'}}>
                     <div style={{width:'10%', height:'8rem', justifyContent:'center', display:'flex'}}>
-                      <img src={job.logoURL} alt="" height={60} />
+                      <img src={job.logoURL} alt="" height={70} />
                     </div>
                     <div style={{width:'80%', display:'flex', justifyContent:'space-between'}}>
                       <div style={{display:'flex', flexDirection:'column'}}>
@@ -171,7 +173,7 @@ function JobMainPage() {
                             <p>{job.location}</p>
                           </div>
                         </div>
-                        <div style={{display:'flex', fontSize:'0.8rem', width:'9rem', justifyContent:'space-between', color:'#ED5353'}}>
+                        <div style={{display:'flex', fontSize:'0.8rem', width:'8rem', justifyContent:'space-between', color:'#ED5353'}}>
                           <p style={{}}>{job.remoteOrOffice}</p>
                           <p>{job.jobType}</p>
                         </div>

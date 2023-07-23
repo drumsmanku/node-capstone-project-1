@@ -53,7 +53,7 @@ function Login() {
       
           </div>
           <button type='submit' style={{cursor:'pointer'}} onClick={login} >Login</button>
-          <span style={{marginLeft:'5rem'}}>Don’t have an account? <button style={{background:'none', color:'black', fontSize:'medium', marginLeft:0, padding:0, width:'5rem', cursor:'pointer'}} onClick={()=>{navigate('/register')}}>Sign Up</button></span>
+          <span style={{marginLeft:'5rem'}}>Don’t have an account? <button style={{background:'none', color:'black', fontSize:'medium', margin:'0'}} onClick={()=>{navigate('/register')}}>Sign Up</button></span>
         </form>
       </div>
       <div className='login-right-container' style={{backgroundImage:`url(${img1})`}}></div>

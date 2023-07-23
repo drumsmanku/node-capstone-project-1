@@ -35,14 +35,7 @@ function Register() {
       .then(res => {
         localStorage.setItem('token', res.data.jwtToken);
         localStorage.setItem('user', res.data.name);
-        const tokenData=localStorage.getItem('token')
-        if(tokenData!=='undefined') {
-          navigate('/main-job')
-        }
-        else{
-          navigate('/failed-signup')
-        }
-        
+        navigate('/main-job')
       })
       .catch(err => console.log(err));
   };
@@ -67,10 +60,10 @@ function Register() {
           </div>
           
 
-          <button type="submit" style={{...buttonStyle, '@media (maxWidth: 768px)': {fontSize:'small', 
+          <button type="submit" style={{...buttonStyle, '@media (max-width: 768px)': {fontSize:'small', 
           }, cursor:'pointer'}} onClick={register} disabled={!ischecked}>Create Account</button>
 
-          <span style={{marginLeft:'5rem'}}>Already have an account? <button style={{background:'none', color:'black', fontSize:'medium', marginLeft:0, padding:0, width:'5rem', cursor:'pointer'}} onClick={()=>{navigate('/login')}}>Sign In</button></span>
+          <span style={{marginLeft:'5rem'}}>Already have an account? <a href="/login">Sign In</a></span>
         </form>
       </div>
       <div className='reg-right-container' style={{backgroundImage:`url(${img1})`}}></div>

@@ -108,9 +108,10 @@ function JobDetails() {
             </div>
             <div style={{width:'90%'}}>
               <h3 style={{marginBottom:0}} ><b>About the job/internship</b></h3><br />
-              <p style={{width:'80%', color:'#999999',  marginTop:'0rem', wordWrap: 'break-word', whiteSpace: 'pre-line'}}> 
-                {jobDets.jobDesc}
-              </p>
+              <div style={{width:'80%', color:'#999999',  marginTop:'0rem', wordWrap: 'break-word'}} 
+                dangerouslySetInnerHTML={{ __html: jobDets.jobDesc }}>
+              </div>
+
 
             </div>
 

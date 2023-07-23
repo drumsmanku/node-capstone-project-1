@@ -67,10 +67,10 @@ function Register() {
           </div>
           
 
-          <button type="submit" style={{...buttonStyle, '@media (maxWidth: 768px)': {fontSize:'small', 
+          <button type="submit" style={{...buttonStyle, '@media (max-width: 768px)': {fontSize:'small', 
           }, cursor:'pointer'}} onClick={register} disabled={!ischecked}>Create Account</button>
 
-          <span style={{marginLeft:'5rem'}}>Already have an account? <button style={{background:'none', color:'black', fontSize:'medium', marginLeft:0, padding:0, width:'5rem', cursor:'pointer'}} onClick={()=>{navigate('/login')}}>Sign In</button></span>
+          <span style={{marginLeft:'5rem'}}>Already have an account? <button onClick={()=>{navigate('/login')}}>Sign In</button></span>
         </form>
       </div>
       <div className='reg-right-container' style={{backgroundImage:`url(${img1})`}}></div>

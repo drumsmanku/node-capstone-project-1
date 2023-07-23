@@ -157,7 +157,7 @@ function JobMainPage() {
                 jobs.map((job, idx)=>(
                   <div key={idx} style={{...styles.jobCard, boxShadow:'0 0 1rem 0rem #FF202030', width:'100%', display:'flex', marginBottom:'2rem',paddingTop:'2rem',paddingBottom:'2rem', alignItems:'center'}}>
                     <div style={{width:'10%', height:'8rem', justifyContent:'center', display:'flex'}}>
-                      <img src={job.logoURL} alt="" height={60} />
+                      <img src={job.logoURL} alt="" height={70} />
                     </div>
                     <div style={{width:'80%', display:'flex', justifyContent:'space-between'}}>
                       <div style={{display:'flex', flexDirection:'column'}}>

@@ -107,13 +107,10 @@ function JobDetails() {
               
             </div>
             <div style={{width:'90%'}}>
-              <h3 style={{marginBottom:0}} ><b>About the job/internship</b></h3><br />
-              <p style={{width:'80%', color:'#999999',  marginTop:'0rem', wordWrap: 'break-word', whiteSpace: 'pre-line'}}> 
-                {jobDets.jobDesc}
-              </p>
-
+              <h3 style={{marginBottom:0}} ><b>About the  job/internship</b></h3><br />
+              <p style={{width:'80%', color:'#999999',  marginTop:'0rem',}}> <pre style={{fontSize:'medium', fontFamily:'DM Sans'}}>{jobDets.jobDesc}</pre></p>
+              
             </div>
-
             <div style={{width:'90%'}}>
               <h3 style={{marginBottom:0}} ><b>Skills Required</b></h3><br />
               <div style={{display:'flex'}}>

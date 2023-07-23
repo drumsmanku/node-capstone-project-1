@@ -87,7 +87,7 @@ function JobMainPage() {
     <div style={{...styles.container, fontFamily:'DM Sans'}} className='main-page-container'>
       <div className='main-upper-container' style={{backgroundImage:`url(${back})`, }}>
         
-        <div style={{display:'flex',width:'100%', justifyContent:' space-between', alignItems:'center',}}>
+        <div>
         <h3 style={{marginLeft:'5rem', color:'white', fontSize:'1.5rem'}}>JobFinder</h3>
         <div style={{display:'flex', marginRight:'5rem'}}>
             {isLoggedIn ? (
@@ -106,7 +106,7 @@ function JobMainPage() {
         </div>
       </div>
       <div className="main-lower-container">
-        <div style={{width:'80%'}}>
+        <div className='content' style={{width:'80%'}}>
           <div className='search-and-tags'style={{...styles.searchAndTags, boxShadow:'0 0 1rem 0rem #FF202050', width:'100%', display:'flex', flexDirection:'column', alignItems:'center', marginTop:"2rem", marginBottom:'1rem'}}>
               <input onChange={handleSearchChange} type="text" placeholder='Type any job title' style={{paddingLeft:'3rem', height:'3rem', width:'80%', borderRadius:'0.5rem', border:'1.8px solid #E3E3E3', fontSize:'1.3rem', marginTop:'1.2rem ', marginBottom:'1.2rem'}} />
               <div style={{width:'84%', display:'flex', marginBottom:"3rem", marginTop:'1rem'}}>
@@ -157,7 +157,7 @@ function JobMainPage() {
                 jobs.map((job, idx)=>(
                   <div key={idx} style={{...styles.jobCard, boxShadow:'0 0 1rem 0rem #FF202030', width:'100%', display:'flex', marginBottom:'2rem',paddingTop:'2rem',paddingBottom:'2rem', alignItems:'center'}}>
                     <div style={{width:'10%', height:'8rem', justifyContent:'center', display:'flex'}}>
-                      <img src={job.logoURL} alt="" height={60} />
+                      <img src={job.logoURL} alt="" width={60} />
                     </div>
                     <div style={{width:'80%', display:'flex', justifyContent:'space-between'}}>
                       <div style={{display:'flex', flexDirection:'column'}}>

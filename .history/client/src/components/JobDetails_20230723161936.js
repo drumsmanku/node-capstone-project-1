@@ -13,9 +13,6 @@ function JobDetails() {
   const [jobDets, setJobDets]=useState([]);
   const [user, setUser] = useState(localStorage.getItem('user'));
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const randomMonths = Math.floor(Math.random() * 12) + 1;
-
   useEffect(() => {
     axios.get(`https://job-new-portal.onrender.com/get-jobs-desc/${id}`) 
       .then(res => {
@@ -96,7 +93,7 @@ function JobDetails() {
                     <img src={duration} alt="" style={{marginRight:'0.8rem'}} />
                     <span>Duration</span>
                   </div>
-                  <span>{randomMonths} Months</span>
+                  <span>6 Months</span>
                 </div>
                 
                 
@@ -107,13 +104,10 @@ function JobDetails() {
               
             </div>
             <div style={{width:'90%'}}>
-              <h3 style={{marginBottom:0}} ><b>About the job/internship</b></h3><br />
-              <p style={{width:'80%', color:'#999999',  marginTop:'0rem', wordWrap: 'break-word', whiteSpace: 'pre-line'}}> 
-                {jobDets.jobDesc}
-              </p>
-
+              <h3 style={{marginBottom:0}} ><b>About the  job/internship</b></h3><br />
+              <p style={{width:'80%', color:'#999999',  marginTop:'0rem',}}> <pre style={{fontSize:'medium', fontFamily:'DM Sans'}}>{jobDets.jobDesc}</pre></p>
+              
             </div>
-
             <div style={{width:'90%'}}>
               <h3 style={{marginBottom:0}} ><b>Skills Required</b></h3><br />
               <div style={{display:'flex'}}>
