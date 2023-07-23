@@ -87,7 +87,7 @@ function JobMainPage() {
 
   return (
     <div style={{...styles.container, fontFamily:'DM Sans'}} className='main-page-container'>
-      <div className='main-upper-container' style={{backgroundImage:`url(${back})`, }}>
+      <div className='main-upper-container' style={{backgroundImage:`url(${img3})`, }}>
         
         <div style={{display:'flex',width:'100%', justifyContent:' space-between', alignItems:'center',}}>
         <h3 style={{marginLeft:'5rem', color:'white', fontSize:'1.5rem'}}>JobFinder</h3>

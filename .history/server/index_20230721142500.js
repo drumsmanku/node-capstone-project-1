@@ -127,13 +127,11 @@ app.get('/get-jobs', async(req, res) => {
     let query = {};
 
     if (skills) {
-      const skillsArray = skills.split(',').map(skill => new RegExp(skill, 'i'));
-      query.skills = { $in: skillsArray };
+      query.skills = { $in: skills.split(',') };
     }
 
     if (jobPosition) {
-      const jobPositionArray = jobPosition.split(',').map(position => new RegExp(position, 'i'));
-      query.jobPosition = { $in: jobPositionArray };
+      query.jobPosition = { $in: jobPosition.split(',') };
     }
 
     const jobs = await CreateJob.find(query);
@@ -144,7 +142,6 @@ app.get('/get-jobs', async(req, res) => {
     res.send({ status: 'failed', message: 'Something went wrong' });
   }
 });
-
 
 app.get('/get-jobs-desc/:id', async(req, res) => {
   try {

@@ -14,10 +14,10 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path='/' element={<JobMainPage/>}/>
+          <Route path='/' element={<Login/>}/>
           <Route path='/register' element={<Register />}/>
           <Route path='/add' element={<AddJob/>}/>
-          <Route path='/login' element={<Login/>}/>
+          <Route path='/view-job' element={<ViewDetailsWithoutLogin/>}/>
           <Route path='/main-job' element={<JobMainPage/>}/>
           <Route path='/edit-job/:id' element={<EditJob/>}/>
           <Route path="/job-det/:id" element={<JobDetails/>}/>

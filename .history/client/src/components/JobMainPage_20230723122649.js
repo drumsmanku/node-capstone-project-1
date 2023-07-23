@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './JobMainPage.css';
-import back from '../Assets/backnew.png'
+import img3 from '../Assets/Rectangle1.png';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import peopleImg from '../Assets/people.png';
@@ -87,7 +87,7 @@ function JobMainPage() {
 
   return (
     <div style={{...styles.container, fontFamily:'DM Sans'}} className='main-page-container'>
-      <div className='main-upper-container' style={{backgroundImage:`url(${back})`, }}>
+      <div className='main-upper-container' style={{backgroundImage:`url(${img3})`, }}>
         
         <div style={{display:'flex',width:'100%', justifyContent:' space-between', alignItems:'center',}}>
         <h3 style={{marginLeft:'5rem', color:'white', fontSize:'1.5rem'}}>JobFinder</h3>

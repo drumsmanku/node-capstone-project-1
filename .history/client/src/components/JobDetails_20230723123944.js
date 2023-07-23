@@ -4,7 +4,7 @@ import axios from 'axios';
 import './JobDetails.css';
 import back from '../Assets/backnew.png'
 import { useNavigate } from 'react-router-dom';
-import profile from '../Assets/profilepic.webp';
+import flagImg from'../Assets/flag.png';
 import money from '../Assets/money.png';
 import duration from '../Assets/duration.png';
 
@@ -49,7 +49,7 @@ function JobDetails() {
                 <>
                   <button style={{background:'none', fontSize:'large', border:'none', fontFamily:'DM Sans', color:'white',zIndex:999}} onClick={handleLogout}>Logout</button>
                   <span style={{color:'white', fontFamily:'DM Sans', fontSize:'large', display:'flex', alignItems:'center', marginLeft:'1rem'}}>Hello! {user}</span>
-                  <img src={profile} alt="" height={50} width={50} style={{borderRadius:'100%', marginLeft:'1rem'}} />
+                  <img src={flagImg} alt="" height={50} width={50} style={{borderRadius:'100%', marginLeft:'1rem'}} />
                 </>
               ) : (
                 <>

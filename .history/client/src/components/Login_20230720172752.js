@@ -46,7 +46,7 @@ function Login() {
           <input type="password" name="password" value={user.password} onChange={handleChange} placeholder="Password" />
       
           </div>
-          <button type='submit' style={{cursor:'pointer'}} onClick={login} >Login</button>
+          <button type='submit' onClick={login} >Login</button>
           <span style={{marginLeft:'5rem'}}>Don’t have an account? <a href="/register">Sign Up</a></span>
         </form>
       </div>

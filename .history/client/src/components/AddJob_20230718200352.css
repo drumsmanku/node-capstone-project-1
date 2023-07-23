@@ -2,15 +2,17 @@
 
 body{
   font-family: 'DM Sans';
+  margin: 0;
+  padding: 0;
 }
 
-.edit-container{
+.add-container{
   height: 100vh;
   width: 100vw;
   display: flex;
 }
 
-.edit-left-container{
+.add-left-container{
   width: 58%;
 
   display: flex;
@@ -18,26 +20,26 @@ body{
   justify-content: center;
   align-items: center;
 }
-.edit-right-container{
+.add-right-container{
   width: 42%;
   background-size: 'cover';
   background-position:center;
   background-repeat: no-repeat;
 }
-.edit-container input{
+.add-container input{
   border: 2px solid #C2C2C2;
   border-radius: 0.2rem;
   margin-bottom: 1rem;
   margin-left: 1rem;
   padding-left: 1rem;
 }
-.edit-left-container form{
+.add-left-container form{
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-left: 20%;
 }
-.btn-edit-page-edit{
+.btn-add-page-add{
   height: 2rem;
   width: 15%;
   font-size: medium;
@@ -47,9 +49,8 @@ body{
   margin-left: 1rem;
   margin-bottom:0;
   color: white;
-  cursor: pointer;
 }
-.btn-edit-page-cancel{
+.btn-add-page-cancel{
   height: 2rem;
   width: 15%;
   font-size: medium;
@@ -57,7 +58,7 @@ body{
   border: 1px solid #CECECE;
   color: #CECECE;
   border-radius: 0.3rem;
-  cursor: pointer;
+ 
   margin-bottom: 0;
   
 }

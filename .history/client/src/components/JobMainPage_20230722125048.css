@@ -35,7 +35,6 @@
   margin-bottom:0;
   color: white;
   font-family: 'DM Sans';
-  cursor: pointer;
 }
 .btn-main-page-register{
   height: 2rem;
@@ -49,5 +48,4 @@
   margin-bottom:0;
   color: #ED5353;
   font-family: 'DM Sans';
-  cursor: pointer;
 }

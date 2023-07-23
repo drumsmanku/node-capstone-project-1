@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './JobMainPage.css';
-import back from '../Assets/backnew.png'
+import img3 from '../Assets/Rectangle1.png';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import peopleImg from '../Assets/people.png';
 import flagImg from'../Assets/flag.png';
-import profile from '../Assets/profilepic.webp';
 
 
 function JobMainPage() {
@@ -87,7 +86,7 @@ function JobMainPage() {
 
   return (
     <div style={{...styles.container, fontFamily:'DM Sans'}} className='main-page-container'>
-      <div className='main-upper-container' style={{backgroundImage:`url(${back})`, }}>
+      <div className='main-upper-container' style={{backgroundImage:`url(${img3})`, }}>
         
         <div style={{display:'flex',width:'100%', justifyContent:' space-between', alignItems:'center',}}>
         <h3 style={{marginLeft:'5rem', color:'white', fontSize:'1.5rem'}}>JobFinder</h3>
@@ -96,7 +95,7 @@ function JobMainPage() {
               <>
                 <button style={{background:'none', fontSize:'large', border:'none', fontFamily:'DM Sans', color:'white'}} onClick={handleLogout}>Logout</button>
                 <span style={{color:'white', fontFamily:'DM Sans', fontSize:'large', display:'flex', alignItems:'center', marginLeft:'1rem'}}>Hello! {user}</span>
-                <img src={profile} alt="" height={50} width={50} style={{borderRadius:'100%', marginLeft:'1rem'}} />
+                <img src={flagImg} alt="" height={50} width={50} style={{borderRadius:'100%', marginLeft:'1rem'}} />
               </>
             ) : (
               <>
@@ -158,7 +157,7 @@ function JobMainPage() {
               {
                 jobs.map((job, idx)=>(
                   <div key={idx} style={{...styles.jobCard, boxShadow:'0 0 1rem 0rem #FF202030', width:'100%', display:'flex', marginBottom:'2rem',paddingTop:'2rem',paddingBottom:'2rem', alignItems:'center'}}>
-                    <div style={{width:'10%', height:'8rem', justifyContent:'center', display:'flex'}}>
+                    <div style={{width:'10%', height:'10rem', justifyContent:'center', display:'flex'}}>
                       <img src={job.logoURL} alt="" height={70} />
                     </div>
                     <div style={{width:'80%', display:'flex', justifyContent:'space-between'}}>

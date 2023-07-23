@@ -2,9 +2,9 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import './JobDetails.css';
-import back from '../Assets/backnew.png'
+import img3 from '../Assets/Rectangle1.png';
 import { useNavigate } from 'react-router-dom';
-import profile from '../Assets/profilepic.webp';
+import flagImg from'../Assets/flag.png';
 import money from '../Assets/money.png';
 import duration from '../Assets/duration.png';
 
@@ -32,7 +32,7 @@ function JobDetails() {
   const handleLogout = () => {
     localStorage.removeItem('user');
     setIsLoggedIn(false);
-    navigate('/login');
+    navigate('/');
   };
 
   const navigate=useNavigate();
@@ -40,20 +40,20 @@ function JobDetails() {
   return (
     <div>
       <div className='details-container'>
-        <div className='details-upper-container' style={{backgroundImage:`url(${back})`, }}>
+        <div className='details-upper-container' style={{backgroundImage:`url(${img3})`}}>
           
           <div style={{display:'flex',width:'100%', justifyContent:' space-between', alignItems:'center'}}>
           <h3 style={{marginLeft:'5rem', color:'white', fontSize:'1.5rem'}}>JobFinder</h3>
           <div style={{display:'flex', marginRight:'5rem'}}>
               {isLoggedIn ? (
                 <>
-                  <button style={{background:'none', fontSize:'large', border:'none', fontFamily:'DM Sans', color:'white',zIndex:999}} onClick={handleLogout}>Logout</button>
+                  <button style={{background:'none', fontSize:'large', border:'none', fontFamily:'DM Sans', color:'white'}} onClick={handleLogout}>Logout</button>
                   <span style={{color:'white', fontFamily:'DM Sans', fontSize:'large', display:'flex', alignItems:'center', marginLeft:'1rem'}}>Hello! {user}</span>
-                  <img src={profile} alt="" height={50} width={50} style={{borderRadius:'100%', marginLeft:'1rem'}} />
+                  <img src={flagImg} alt="" height={50} width={50} style={{borderRadius:'100%', marginLeft:'1rem'}} />
                 </>
               ) : (
                 <>
-                  <button className='btn-details-page-login' onClick={()=>{navigate('/login')}} type='submit'  >Login</button>
+                  <button className='btn-details-page-login' onClick={()=>{navigate('/')}} type='submit'  >Login</button>
                   <button type='submit'  onClick={()=>{navigate('/register')}} className='btn-details-page-register'  >Register</button>
                 </>
               )}

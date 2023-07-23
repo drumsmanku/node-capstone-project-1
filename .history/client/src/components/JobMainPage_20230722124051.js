@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './JobMainPage.css';
-import back from '../Assets/backnew.png'
+import img3 from '../Assets/Rectangle1.png';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import peopleImg from '../Assets/people.png';
 import flagImg from'../Assets/flag.png';
-import profile from '../Assets/profilepic.webp';
 
 
 function JobMainPage() {
@@ -55,7 +54,7 @@ function JobMainPage() {
   const handleLogout = () => {
     localStorage.removeItem('user');
     setIsLoggedIn(false);
-    navigate('/login');
+    navigate('/');
   };
   const navigate=useNavigate();
 
@@ -87,7 +86,7 @@ function JobMainPage() {
 
   return (
     <div style={{...styles.container, fontFamily:'DM Sans'}} className='main-page-container'>
-      <div className='main-upper-container' style={{backgroundImage:`url(${back})`, }}>
+      <div className='main-upper-container' style={{backgroundImage:`url(${img3})`, }}>
         
         <div style={{display:'flex',width:'100%', justifyContent:' space-between', alignItems:'center',}}>
         <h3 style={{marginLeft:'5rem', color:'white', fontSize:'1.5rem'}}>JobFinder</h3>
@@ -96,11 +95,11 @@ function JobMainPage() {
               <>
                 <button style={{background:'none', fontSize:'large', border:'none', fontFamily:'DM Sans', color:'white'}} onClick={handleLogout}>Logout</button>
                 <span style={{color:'white', fontFamily:'DM Sans', fontSize:'large', display:'flex', alignItems:'center', marginLeft:'1rem'}}>Hello! {user}</span>
-                <img src={profile} alt="" height={50} width={50} style={{borderRadius:'100%', marginLeft:'1rem'}} />
+                <img src={flagImg} alt="" height={50} width={50} style={{borderRadius:'100%', marginLeft:'1rem'}} />
               </>
             ) : (
               <>
-                <button className='btn-main-page-login' onClick={()=>{navigate('/login')}} type='submit'  >Login</button>
+                <button className='btn-main-page-login' onClick={()=>{navigate('/')}} type='submit'  >Login</button>
                 <button type='submit'  onClick={()=>{navigate('/register')}} className='btn-main-page-register'  >Register</button>
               </>
             )}
@@ -130,7 +129,7 @@ function JobMainPage() {
                     skillsDet.map((skill, key) => (
                       <span style={{marginRight:'1rem', backgroundColor:'#FFEEEE', height:'2rem', width:'6rem', fontSize:'small',display:'flex', justifyContent:'space-between', alignItems:'center', paddingLeft:'1rem', borderRadius:'0.2rem', marginBottom:'1rem'}} id={key}>
                         {skill} 
-                        <button style={{height:'inherit', border:'none', backgroundColor:'#FF6B6B', width:'30%', color:'white', cursor:'pointer'}} onClick={() => removeSkill(skill)}>X</button>
+                        <button style={{height:'inherit', border:'none', backgroundColor:'#FF6B6B', width:'30%', color:'white'}} onClick={() => removeSkill(skill)}>X</button>
                       </span>
                     ))
                     
@@ -144,7 +143,7 @@ function JobMainPage() {
                   }
                   {
                     isLoggedIn&&(
-                      <button onClick={()=>{navigate('/add')}} style={{backgroundColor:'#ED5353', border:'none', borderRadius:'0.2rem', height:'2rem', width:'8rem', color:'white', fontFamily:'DM Sans', fontSize:'medium', marginRight:'0.5rem', cursor:'pointer'}}>Add Job +</button>
+                      <button onClick={()=>{navigate('/add')}} style={{backgroundColor:'#ED5353', border:'none', borderRadius:'0.2rem', height:'2rem', width:'8rem', color:'white', fontFamily:'DM Sans', fontSize:'medium', marginRight:'0.5rem'}}>Add Job +</button>
                     )
                   }
                  
@@ -158,8 +157,8 @@ function JobMainPage() {
               {
                 jobs.map((job, idx)=>(
                   <div key={idx} style={{...styles.jobCard, boxShadow:'0 0 1rem 0rem #FF202030', width:'100%', display:'flex', marginBottom:'2rem',paddingTop:'2rem',paddingBottom:'2rem', alignItems:'center'}}>
-                    <div style={{width:'10%', height:'8rem', justifyContent:'center', display:'flex'}}>
-                      <img src={job.logoURL} alt="" height={70} />
+                    <div style={{width:'8%', height:'100%'}}>
+                      <img src={job.logoURL} alt="" />
                     </div>
                     <div style={{width:'80%', display:'flex', justifyContent:'space-between'}}>
                       <div style={{display:'flex', flexDirection:'column'}}>
@@ -190,8 +189,8 @@ function JobMainPage() {
                           }
                         </div>
                         <div>
-                          {isLoggedIn && <button style={{backgroundColor:'white', border:'2px solid #ED5353', borderRadius:'0.2rem', height:'2rem', width:'8rem', color:'#ED5353', fontFamily:'DM Sans', fontSize:'medium', marginRight:'0.5rem', cursor:'pointer'}} onClick={() => navigate(`/edit-job/${job._id}`)}>Edit job</button>}
-                          <button style={{backgroundColor:'#ED5353', border:'none', borderRadius:'0.2rem', height:'2rem', width:'8rem', color:'white', fontFamily:'DM Sans', fontSize:'medium', marginRight:'0.5rem', cursor:'pointer'}} onClick={() => navigate(`/job-det/${job._id}`)} > View Details
+                          {isLoggedIn && <button style={{backgroundColor:'white', border:'2px solid #ED5353', borderRadius:'0.2rem', height:'2rem', width:'8rem', color:'#ED5353', fontFamily:'DM Sans', fontSize:'medium', marginRight:'0.5rem'}} onClick={() => navigate(`/edit-job/${job._id}`)}>Edit job</button>}
+                          <button style={{backgroundColor:'#ED5353', border:'none', borderRadius:'0.2rem', height:'2rem', width:'8rem', color:'white', fontFamily:'DM Sans', fontSize:'medium', marginRight:'0.5rem'}} onClick={() => navigate(`/job-det/${job._id}`)} > View Details
                           </button>
                         </div>
                         

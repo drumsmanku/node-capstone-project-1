@@ -62,7 +62,7 @@ function Register() {
           
 
           <button type="submit" style={{...buttonStyle, '@media (max-width: 768px)': {fontSize:'small', 
-          }, cursor:'pointer'}} onClick={register} disabled={!ischecked}>Create Account</button>
+          }}} onClick={register} disabled={!ischecked}>Create Account</button>
 
           <span style={{marginLeft:'5rem'}}>Already have an account? <a href="/login">Sign In</a></span>
         </form>
